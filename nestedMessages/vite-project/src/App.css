@@ -1,0 +1,17 @@
+.min-box{
+    height: 80vh;
+    width: 100vw;
+    background-color: azure;
+    margin: 0;
+    padding: 0%;
+}
+.comment{
+    width: 100%;
+    height: max-content;
+    margin: 0;
+    padding: 0%;
+} 
+h6,h3{ 
+    margin: 10px;
+    padding: 0%;
+}

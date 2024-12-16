@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="data-box" >-</h1>
+
+<script>
+    const dataBox = document.getElementById("data-box");
+    async function callAndUpdte() {
+        let newData = await fetch(`http://localhost:3000/getData/${dataBox.innerHTML}`,);
+        newData = await newData.json();
+        dataBox.innerHTML = newData.data;
+        setTimeout(()=>{
+            callAndUpdte();
+        },1000);
+    }
+    callAndUpdte();
+</script>
+</body>
+</html>
